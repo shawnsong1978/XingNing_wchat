@@ -4,10 +4,15 @@
   */
 //define your token
 define("TOKEN", "Nvm63pY2QWou9JqYlQjcL");
-$wechatObj = new wechatCallbackapiTest();
-$wechatObj->valid();
+$wechatObj = new wechatCallbackapi();
 
-class wechatCallbackapiTest
+if (!isset($_GET['echostr'])) {
+    $wechatObj->responseMsg();
+}else{
+    $wechatObj->valid();
+}
+
+class wechatCallbackapi
 {
 	public function valid()
     {

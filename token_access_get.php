@@ -5,9 +5,9 @@
 
 define("APP_ID","wx6cc5ffcf064fa1e5");
 define("APP_SECRET","4193908a9a898a9ee658ef30c39b3de6");
-
+echo "1";
 if(exists_token())
-{	
+{	echo "3";
 	if(exprise_token())
 	{
 		$token = get_accessToken();
@@ -21,6 +21,7 @@ if(exists_token())
 }
 else
 {
+	echo "2";
     $token = get_accessToken();
     file_put_contents("token.txt",$token);
 }
@@ -28,7 +29,7 @@ var_dump($token);
 
 function exists_token()
 {
-    if(file_exits("token.txt"))
+    if(file_exists("token.txt"))
     {
         return true;
     }

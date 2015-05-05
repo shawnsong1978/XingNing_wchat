@@ -5,31 +5,30 @@
 
 define("APP_ID","wx6cc5ffcf064fa1e5");
 define("APP_SECRET","4193908a9a898a9ee658ef30c39b3de6");
-echo "1";
+define("TOKENFILE","/tmp/token.txt");
 if(exists_token())
-{	echo "3";
-	if(exprise_token())
-	{
-		$token = get_accessToken();
-		unlink("token.txt");
-		file_put_contents("token.txt",$token);
-	}
-	else
-	{
-	   	$token = file_get_contents("token.txt");
-	}
+{
+        if(exprise_token())
+        {
+                $token = get_accessToken();
+                unlink(TOKENFILE);
+                file_put_contents(TOKENFILE,$token);
+        }
+        else
+        {
+                $token = file_get_contents(TOKENFILE);
+        }
 }
 else
 {
-	echo "2";
     $token = get_accessToken();
-    file_put_contents("token.txt",$token);
+    file_put_contents(TOKENFILE,$token);
 }
 var_dump($token);
 
 function exists_token()
 {
-    if(file_exists("token.txt"))
+    if(file_exists(TOKENFILE))
     {
         return true;
     }
@@ -40,7 +39,7 @@ function exists_token()
 }
 function exprise_token()
 {
-    $ctime = filectime("token.txt");
+    $ctime = filectime(TOKENFILE);
     if(time() - $ctime >= 7000)
     {
         return true;

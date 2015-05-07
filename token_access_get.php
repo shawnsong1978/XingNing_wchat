@@ -5,7 +5,7 @@
 
 define("APP_ID","wx6cc5ffcf064fa1e5");
 define("APP_SECRET","4193908a9a898a9ee658ef30c39b3de6");
-define("TOKENFILE","/tmp/token.txt");
+define("TOKENFILE","/xingning/token.txt");
 if(exists_token())
 {
         if(exprise_token())

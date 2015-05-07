@@ -6,7 +6,9 @@
 //define your token
 define("TOKEN", "Nvm63pY2QWou9JqYlQjcL");
 
-include('./log/log.php');
+include_once './log/log.php';
+
+
 
 $wechatObj = new wechatCallbackapi();
 
@@ -21,7 +23,7 @@ class wechatCallbackapi
 	public function valid()
     {
         $echoStr = $_GET["echostr"];
-
+        $this->logger("valid ".$GLOBALS["HTTP_RAW_POST_DATA"]);
         //valid signature , option
         if($this->checkSignature()){
         	echo $echoStr;
@@ -29,7 +31,7 @@ class wechatCallbackapi
         }
     }
     
-    //响应消息
+
     public function responseMsg()
     {
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
@@ -38,8 +40,8 @@ class wechatCallbackapi
             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
             $RX_TYPE = trim($postObj->MsgType);
              
-            //消息类型分离
-            switch ($RX_TYPE)
+            //response type defile
+            //switch ($RX_TYPE)
             {
             /*
                 case "event":

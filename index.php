@@ -7,7 +7,7 @@
 define("TOKEN", "Nvm63pY2QWou9JqYlQjcL");
 
 include_once './log/log.php';
-
+include_once 'mem.php';
 
 
 $wechatObj = new wechatCallbackapi();
@@ -27,10 +27,10 @@ class wechatCallbackapi
         $timestamp = $_GET["timestamp"];
         $nonce = $_GET["nonce"];
         $echoStr = $_GET["echostr"];
-        $this->logger("valid ".$echoStr);
-        $this->logger("valid ".$signature);
-        $this->logger("valid ".$timestamp);
-        $this->logger("valid ".$nonce);
+        $this->logger("valid : echostr ".$echoStr);
+        $this->logger("valid : signature ".$signature);
+        $this->logger("valid : timestamp ".$timestamp);
+        $this->logger("valid : nonce ".$nonce);
         //valid signature , option
         if($this->checkSignature()){
         	echo $echoStr;

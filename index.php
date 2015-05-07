@@ -22,8 +22,15 @@ class wechatCallbackapi
 {
 	public function valid()
     {
+        
+        $signature = $_GET["signature"];
+        $timestamp = $_GET["timestamp"];
+        $nonce = $_GET["nonce"];
         $echoStr = $_GET["echostr"];
-        $this->logger("valid ".$GLOBALS["HTTP_RAW_POST_DATA"]);
+        $this->logger("valid ".$echoStr);
+        $this->logger("valid ".$signature);
+        $this->logger("valid ".$timestamp);
+        $this->logger("valid ".$nonce);
         //valid signature , option
         if($this->checkSignature()){
         	echo $echoStr;

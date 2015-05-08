@@ -1,8 +1,7 @@
 <?php
 
 /* write log*/
-include_once '../mem.php';
-
+include_once "mem.php";
 class log
 {
 	public  static function logger($log_content,$level)

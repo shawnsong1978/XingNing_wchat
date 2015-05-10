@@ -86,31 +86,31 @@ h1,h2,h3,h4,h5,h6 {
 }
 #apDiv1 {
 	position: absolute;
-	left: 94px;
-	top: 178px;
-	width: 300px;
-	height: 180px;
+	left: 60px;
+	top: 130px;
+	width: 200px;
+	height: 90px;
 	z-index: 1;
 	background-color: #CCCCCC;
-	visibility: hidden;
+	visibility: visible;
 }
 #apDiv2 {
 	position: absolute;
-	width: 65px;
-	height: 25px;
+	width: 35px;
+	height: 16px;
 	z-index: 1;
-	left: 60px;
-	top: 90px;
+	left: 45px;
+	top: 40px;
 	text-align: center;
 	background-color: #FFFFFF;
 }
 
 #apDiv3 {
 	position: absolute;
-	left: 180px;
-	top: 90px;
-	width: 65px;
-	height: 25px;
+	left: 120px;
+	top: 40px;
+	width: 35px;
+	height: 16px;
 	z-index: 1;
 	text-align: center;
 	background-color: #0066CC;
@@ -120,10 +120,10 @@ h1,h2,h3,h4,h5,h6 {
 
 #apDiv4 {
 	position: absolute;
-	left: 232px;
-	top: 145px;
-	width: 45px;
-	height: 25px;
+	left: 160px;
+	top: 69px;
+	width: 25px;
+	height: 16px;
 	z-index: 1;
 	text-align: center;
 	background-color: #0066CC;
@@ -136,7 +136,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: #FFFFFF;
 }
 #apDiv1 table tr td {
-	font-size: 12px;
+	font-size: 9px;
 }
 button2 {
 	color: #FFF;
@@ -144,59 +144,68 @@ button2 {
 .grey_font {
 	color: #666;
 }
+.write_9 {
+	font-size: 9px;
+}
+.grey_9 {
+	font-size: 9px;
+}
+.gray_9 {
+	color: #666;
+}
+.Black_12 {
+	font-size: 12px;
+}
 </style>
 </head>
 
 <body>
 <div id="apDiv1">
-  <table width="90%"  align="center">
+  <table width="90%"  align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td height="20"></td>
+      <td height="10"></td>
     </tr>
     <tr>
-      <td height="50" class="head_CR"><span class="head_CR">一键救援</span></td>
+      <td height="20" class="head_CR"><span class="Black_12">一键救援</span></td>
     </tr>
     <tr>
-      <td height="40"></td>
+      <td height="25"></td>
     </tr>
     <tr>
-      <td height="5"><hr  color="#000000" size="4" /></td>
-    </tr>
-  </table>
-  <table width="90%" align="center">
-    <tr>
-      <td width="60"  height="25"align="center" valign="middle"><span class="grey_font">通话号码</span>：</td>
-      <td align="left" valign="middle">
-        <input name="tel_change"  type="text" id="tel_change" value="123456778" maxlength="16"  width="100"  readonly="readonly" />
-        
-        </td>
-      <td width="50"></td>
+      <td height="5"><hr  color="#000000" size="2" /></td>
     </tr>
   </table>
   <div id="apDiv2" onclick="MM_showHideLayers('apDiv1','','hide')">
-    <table width="90%" height="24">
+    <table width="100%" height="12" cellpadding="0" cellspacing="1">
       <tr>
-        <td height="20" align="center" valign="middle">取消</td>
+        <td  height="10" align="center" valign="middle" style="font-size:9px">取消</td>
       </tr>
     </table>
   </div>
   <div id="apDiv3">
-  	<table width="90%" height="24" onclick="MM_goToURL('parent','sos_stub.html');return document.MM_returnValue">
+  	<table width="100%" height="14" align="center" cellpadding="0" cellspacing="1" onclick="MM_goToURL('parent','sos_stub.html');return document.MM_returnValue">
       <tr>
-        <td height="20" align="center" valign="middle">确定</td>
+        <td  height="14" align="center" valign="top"><span class="write_9">确定</span></td>
       </tr>
     </table>
   </div>
   <div id="apDiv4">
-  	<table width="90%" height="24">
+  	<table width="100%" height="14" cellpadding="0" cellspacing="1">
       <tr>
-        <td height="20" align="center" valign="middle" onclick="MM_setTextOfTextfield('tel_change','','请输入联系号码')">修改</td>
+        <td height="14" align="center" valign="middle" onclick="MM_setTextOfTextfield('tel_changed','','请输入联系号码')"><span class="write_9">修改</span></td>
       </tr>
     </table>
   </div>
+  <table width="90%">
+    <tr>
+      <td width="25%"><label style="font-size:9px;"><span class="gray_9">通话号码</span></label></td>
+      <td width="60%"><input name="tel_changed" type="text" id="tel_changed" value="12345678956" size="15"  align="left"  style="font-size:9px"/></td>
+      <td width="15%">&nbsp;</td>
+    </tr>
+  </table>
 </div>
 
-<table width="90%" align="center" cellpadding="20">
+<table width="90%" align="center" cellpadding="0">
   <tr>
     <td class="head_CR">提供全天候无缝隙救援</td>
   </tr>

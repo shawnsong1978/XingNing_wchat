@@ -31,6 +31,12 @@ input
 	font-size: 14px;
 }
 </style>
+<script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
 </head>
 
 <body>
@@ -46,7 +52,7 @@ input
     <td width="226"><label class="CRole2">次数 &nbsp;&nbsp;&nbsp;:</label>
     <input name="Valid_times" type="text" id="Valid_times" readonly="readonly"  value="unknow" style="color:#999"/></td>
     <td width="62" align="center" valign="middle">
-      <input type="submit" name="do_userchoose" id="do_userchoose" value="注册"  style=" background-color:#06F; color:#FFF; width:60px" />
+      <input name="do_userchoose" type="submit" id="do_userchoose"  style=" background-color:#06F; color:#FFF; width:60px" onclick="MM_goToURL('parent','register.php');return document.MM_returnValue" value="注册" />
     </td>
   </tr>
   <tr>

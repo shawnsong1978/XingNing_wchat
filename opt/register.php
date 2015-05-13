@@ -177,10 +177,10 @@ function showcity(idx)
     </table></td>
   </tr>
   <tr  bgcolor="#CCCCCC">
-    <td height="20" colspan="2"></td>
+    <td height="20" colspan="2" bgcolor="#CCCCCC"></td>
   </tr>
   <tr bgcolor="#FFFFFF">
-    <td colspan="2" align="center" valign="middle">
+    <td colspan="2" align="center" valign="middle" bgcolor="#CCCCCC">
       <input type="submit" name="DoSave" id="DoSave" value="确&nbsp;&nbsp;认"  style="background:#0066CC; color:#FFF;font-size:16px; width:280px; height:30px; display:table" />
     </td>
   </tr>
